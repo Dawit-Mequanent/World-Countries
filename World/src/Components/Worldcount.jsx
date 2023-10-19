@@ -21,25 +21,43 @@ const Worldcount = () => {
   }, []);
 
   return (
-    <>
-      {country.map((country) => {
-        const { name, flags, capital, population, languages } = country;
-        const flag = flags.png;
+    <section className='table'>
+      <table>
+        <thead>
+          <tr>
+            <th className="column-divider"><div className="header-line"></div>Flag</th>
+            <th className="column-divider"><div className="header-line"></div>Country</th>
 
-        return (
-          <article key={name}>
-            World Country Data
-            <div>
-              <img src={flag} alt={name} />
-              <h3>{name}</h3>
-              <h4>Capital: <span>{capital}</span></h4>
-              <h4>Population: <span>{population}</span></h4>
-              <h4>Language: <span>{languages[0].name}</span></h4>
-            </div>
-          </article>
-        );
-      })}
-    </>
+            
+
+            <th className="column-divider"><div className="header-line"></div>Capital</th>
+            <th className="column-divider"><div className="header-line"></div>Population</th>
+            <th className="column-divider"><div className="header-line"></div>Language</th>
+          </tr>
+          <tr><div className="header-line"></div></tr>
+          
+        </thead>
+        <tbody >
+          {country.map((country, index) => {
+            const { name, flags, capital, population, languages } = country;
+            const flag = flags.png;
+
+            return (
+              <React.Fragment key={name}>
+                <tr >
+                  <td className="column-divider"><img src={flag} alt={name} /></td>
+                  <td className="column-divider">{name}</td>
+                  <td className="column-divider">{capital}</td>
+                  <td className="column-divider">{population}</td>
+                  <td className="column-divider">{languages[0].name}</td>
+                </tr>
+                {index !== country.length - 1 && <tr><td colSpan="5" className="row-divider"></td></tr>}
+              </React.Fragment>
+            );
+          })}
+        </tbody>
+      </table>
+    </section>
   );
 };
 
