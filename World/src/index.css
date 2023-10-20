@@ -27,7 +27,7 @@ body {
   padding: 10px;
 }
 img {
-  width: 100px;
+  width: 150px;
 }
 .row-divider {
   border-bottom: 1px solid #ccc;
@@ -45,4 +45,28 @@ img {
   border-bottom: 2px solid #ccc;
 
   
+}
+.world-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.world-table th,
+.world-table td {
+  border: 2px solid #dac5c5;
+  padding: 6px;
+  text-align: left;
+}
+
+.world-table .header-line,
+.world-table .row-divider {
+  border-bottom: 1px solid #000;
+}
+
+.world-table .column-divider {
+  border-right: 1px solid #000;
+}
+
+.world-table img {
+  max-width: 90px;
 }
