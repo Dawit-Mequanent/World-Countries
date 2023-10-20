@@ -1,19 +1,89 @@
 
-
 body {
-  font-family: 'Playfair Display', serif;
-  padding: 20px;
+  
+  background-image: linear-gradient(to right , #2f3640 , #9b7798);
+  top: 50px;
+}
+
+.searchBox {
+  position: absolute;
+  top: -3%;
+  left: 5%;
+  transform:  translate(-8%,50%);
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+  width: 500px;
+  padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+background: rgb(255, 255, 255);
+color : #2f3640;
+}
+
+.searchButton {
+  color: rgb(255, 255, 255);
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.searchInput {
+  border:none;
+  background: none;
+  outline:none;
+  float:right;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.5s;
+  line-height: 40px;
+  width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+  width: 150px;
+  padding: 0 6px;
+}
+}
+
+.no-results {
+   color: rgb(235, 88, 20);
+   font-size: 25px;
 }
 
 
 
 
 
+h2 {
+  color: rgb(248, 152, 248);
+}
+h3 {
+  color: azure;
+}
+h4 {
+  color: azure;
+}
 
 .table {
+  margin-top: 80px;
   display: table;
-  
- width: 100%;
+  width: 100%;
   
 }
 
@@ -35,12 +105,20 @@ img {
   
   
 }
+th.column-divider{
+
+  color: #000;
+}
+
+
 .column-divider {
-  border-right: 1px solid #ccc;
+  
+  border-right: 1px solid #2f3640;
   border-left: 1px solid #ccc;
   
 }
 .header-line {
+  
   border-top: 1px solid #ccc;
   border-bottom: 2px solid #ccc;
 
@@ -53,7 +131,7 @@ img {
 
 .world-table th,
 .world-table td {
-  border: 2px solid #dac5c5;
+  border: 0px solid #dac5c5;
   padding: 6px;
   text-align: left;
 }
@@ -64,9 +142,21 @@ img {
 }
 
 .world-table .column-divider {
-  border-right: 1px solid #000;
+  border-right: 0.5px solid #000;
 }
 
 .world-table img {
   max-width: 90px;
 }
+.table-container {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.world-table thead {
+  position: sticky;
+  top: 0;
+  background-color: #191e22;
+  z-index: 1;
+}
+
