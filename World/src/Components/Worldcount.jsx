@@ -2,10 +2,30 @@ import React, { useState, useEffect } from 'react';
 
 const url = 'https://restcountries.com/v2/all';
 
+const CountryCard = ({ country }) => {
+  return (
+    <div className="card">
+      <div className="card-body">
+        <img src={country.flags.png} alt={country.name} />
+        <h3>{country.name}</h3>
+        <p>
+          <strong>Capital:</strong> {country.capital}
+        </p>
+        <p>
+          <strong>Population:</strong> {country.population.toLocaleString()}
+        </p>
+        <p>
+          <strong>Language:</strong> {country.languages[0].name}
+        </p>
+      </div>
+    </div>
+  );
+};
+
 const Worldcount = () => {
   const [country, setCountry] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [isInputUndefined, setIsInputUndefined] = useState(false);
+  const [selectedRow, setSelectedRow] = useState(-1);
 
   useEffect(() => {
     const fetchWorldCountryData = async () => {
@@ -24,7 +44,6 @@ const Worldcount = () => {
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
-    setIsInputUndefined(false); // Reset the input undefined flag
   };
 
   const handleSearchClick = () => {
@@ -36,6 +55,14 @@ const Worldcount = () => {
     return population.toLocaleString();
   };
 
+  const handleCountrySelect = (index) => {
+    if (selectedRow === index) {
+      setSelectedRow(-1);
+    } else {
+      setSelectedRow(index);
+    }
+  };
+
   const filteredCountries = country.filter((country) =>
     country.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -45,7 +72,7 @@ const Worldcount = () => {
       return (
         <tr>
           <td colSpan="5" className="no-results">
-            No matching countries found with your input!!
+            No matching countries found !!
           </td>
         </tr>
       );
@@ -55,9 +82,12 @@ const Worldcount = () => {
       const { name, flags, capital, population, languages } = country;
       const flag = flags.png;
 
+      const isRowSelected = index === selectedRow;
+      const rowClass = isRowSelected ? 'selected-row' : '';
+
       return (
         <React.Fragment key={name}>
-          <tr>
+          <tr className={`table-row ${rowClass}`} onClick={() => handleCountrySelect(index)}>
             <td className="column-divider">
               <img src={flag} alt={name} />
             </td>
@@ -74,9 +104,11 @@ const Worldcount = () => {
               <h4>{languages[0].name}</h4>
             </td>
           </tr>
-          {index !== filteredCountries.length - 1 && (
+          {isRowSelected && (
             <tr>
-              <td colSpan="5" className="row-divider"></td>
+              <td colSpan="5" className="card-cell">
+                <CountryCard country={country} />
+              </td>
             </tr>
           )}
         </React.Fragment>
@@ -85,7 +117,7 @@ const Worldcount = () => {
   };
 
   return (
-    <section className='table'>
+    <section className="table">
       <div className="searchBox">
         <input
           className="searchInput"
@@ -114,7 +146,7 @@ const Worldcount = () => {
               <th className="column-divider">
                 <h2>Population</h2>
               </th>
-              <th className="column-divider">
+              <th>
                 <h2>Language</h2>
               </th>
             </tr>

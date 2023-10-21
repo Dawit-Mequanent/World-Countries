@@ -100,11 +100,13 @@ img {
   width: 150px;
 }
 .row-divider {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #000000;
   border-top: 1px solid #ccc;
   
   
 }
+
+
 th.column-divider{
 
   color: #000;
@@ -131,7 +133,7 @@ th.column-divider{
 
 .world-table th,
 .world-table td {
-  border: 0px solid #dac5c5;
+  border: 0px solid #000000;
   padding: 6px;
   text-align: left;
 }
@@ -139,6 +141,7 @@ th.column-divider{
 .world-table .header-line,
 .world-table .row-divider {
   border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
 }
 
 .world-table .column-divider {
@@ -160,3 +163,54 @@ th.column-divider{
   z-index: 1;
 }
 
+.table-row {
+  transition: transform 0.3s ease; /* Add a transition effect */
+  border-bottom: 1px solid #000000;;
+}
+
+.table-row:hover {
+  transform: scale(1.1); /* Increase the scale on hover */
+  transform: translateX(0.1%) translateY(60%); /* Translate horizontally by -1% and vertically by 40% */
+  background: #201822;
+  width: 200px;
+  height: 90px;
+  box-shadow: 0 0 5px 0 rgb(183, 235, 206); /* Add a box shadow effect */
+}
+
+.card-body {
+  background-color: rgb(30, 32, 32);
+  margin-left: 350px;
+  margin-right: 300px;
+  padding: 20px 5px 0px 5px;
+  text-align: center;
+  color: rgb(50, 253, 236);
+  width: 500px;
+  height: 370px;
+  z-index: 10;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px #fffb04, 0px 0px 10px rgb(248, 252, 4);
+  filter: blur(0px); /* Initially no blur */
+ 
+  
+}
+
+
+.card-body img {
+  width: 90px;
+  height: 60px;
+  
+  
+}
+
+strong  {
+  font-size: 30px;
+}
+p {
+  font-size: 20px;
+}
+.card h3 {
+  font-size: 40px;
+  font-family:monospace;
+  color:aqua;
+  text-decoration: underline;
+}
