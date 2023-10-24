@@ -1,10 +1,10 @@
 body {
   background-image: linear-gradient(to right, #2f3640, #9b7798);
   top: 50px;
-  width: 100.5%;
+  width: 100%;
 }
 html {
-
+height: 100%;
 width: 100%;
 position:fixed;
 }
@@ -172,8 +172,8 @@ th.column-divider {
 
 .card-body {
   background-color: rgb(30, 32, 32);
-  margin-left: 350px;
-  margin-right: 300px;
+  margin-left: 30%;
+  margin-right: 15%;
   margin-top: 50px;
   margin-bottom: 100px;
   padding: 20px 5px 0px 5px;
@@ -841,7 +841,7 @@ img {
 
 @media screen and (max-width: 480px) {
   .card-body {
-    margin: 100px 85px 40px 20px;
+    margin: 100px 15% 40px 15%;
     padding: 10px 5px 0px 10px;
     font-size: 16px;
     width: auto;
@@ -882,7 +882,7 @@ img {
 
 @media screen and (min-width: 480px) and (max-width: 1024px) {
   .card-body {
-    margin: 100px 85px 40px 20px;
+    margin: 100px 25% 40px 25%;
     padding: 10px 5px 0px 10px;
     font-size: 16px;
     width: auto;

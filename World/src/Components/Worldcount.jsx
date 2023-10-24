@@ -22,10 +22,17 @@ const CountryCard = ({ country }) => {
   );
 };
 
+
+
+
+
+
+
 const Worldcount = () => {
   const [country, setCountry] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedRow, setSelectedRow] = useState(-1);
+
 
   useEffect(() => {
     const fetchWorldCountryData = async () => {
@@ -46,9 +53,11 @@ const Worldcount = () => {
     setSearchTerm(event.target.value);
   };
 
+  
+
   const handleSearchClick = () => {
-    // Perform search logic here
-    // You can use the searchTerm state to filter the countries
+    // for search logic here
+   
   };
 
   const formatPopulation = (population) => {
@@ -72,7 +81,7 @@ const Worldcount = () => {
       return (
         <tr>
           <td colSpan="5" className="no-results">
-            No matching countries found !!
+                                     No matching countries found !!
           </td>
         </tr>
       );
@@ -115,6 +124,11 @@ const Worldcount = () => {
       );
     });
   };
+
+
+
+
+  
 
   return (
     <section className="table">
