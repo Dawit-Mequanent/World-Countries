@@ -80,4 +80,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 - The Vite and React communities for their excellent documentation and resources.
 
 ## Demo Link
-world-countries-five.vercel.app
+https://gleeful-sawine-01be1c.netlify.app/
