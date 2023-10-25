@@ -38,20 +38,23 @@ To run the application locally, follow these steps:
     cd World-Countries/World
     ```
 
-3. Install the dependencies:
+3. Remove the node_modules directory:
+   ```
+   rm -rf node_modules
+   ```
 
-    ```
-    rm -rf node_modules/npm install
+4. Reinstall dependencies using npm:
+   ```
+  npm install
+   ```
 
-    ```
-
-4. Start the development server:
+5. Start the development server:
 
     ```
     npm run dev
     ```
 
-5. Open your browser and visit `http://localhost:5173` to access the application.
+6. Open your browser and visit `http://localhost:5173` to access the application.
 
 ## Contributing
 
