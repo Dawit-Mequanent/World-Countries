@@ -45,7 +45,7 @@ To run the application locally, follow these steps:
 
 4. Reinstall dependencies using npm:
    ```
-  npm install
+   npm install
    ```
 
 5. Start the development server:
@@ -84,3 +84,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 ## Demo Link
 https://exquisite-starburst-9ce8c1.netlify.app/
+g
