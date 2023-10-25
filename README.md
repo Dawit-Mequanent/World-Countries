@@ -35,13 +35,14 @@ To run the application locally, follow these steps:
 2. Navigate to the project directory:
 
     ```
-    cd countries-app
+    cd World-Countries/World
     ```
 
 3. Install the dependencies:
 
     ```
-    npm install
+    rm -rf node_modules/
+npm install
     ```
 
 4. Start the development server:
@@ -77,3 +78,6 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 - The country data used in this application is sourced from the REST API provided by [restcountries.com](https://restcountries.com/v2/all).
 
 - The Vite and React communities for their excellent documentation and resources.
+
+## Demo Link
+world-countries-five.vercel.app
