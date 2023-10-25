@@ -41,8 +41,8 @@ To run the application locally, follow these steps:
 3. Install the dependencies:
 
     ```
-    rm -rf node_modules/
-npm install
+    rm -rf node_modules/npm install
+
     ```
 
 4. Start the development server:
@@ -80,4 +80,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 - The Vite and React communities for their excellent documentation and resources.
 
 ## Demo Link
-https://gleeful-sawine-01be1c.netlify.app/
+https://exquisite-starburst-9ce8c1.netlify.app/
